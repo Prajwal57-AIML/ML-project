@@ -1,5 +1,12 @@
+#Byte-complete / optimized / DLL files
 venv/
-__pycache__
-*.pkl
+__pycache__/
 *.ipynb_checkpoints
 .env
+
+#C extension
+*.so
+
+#Distribution / packaging
+.Python
+bulid/
