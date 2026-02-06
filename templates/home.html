@@ -1,3 +1,61 @@
-<h1>
-    Hello World
-</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>California Housing Price Prediction</title>
+</head>
+
+<body>
+
+  <center>
+    <h1>🏠 California Housing Price Prediction</h1>
+    <p>Enter housing details to predict the median house value</p>
+  </center>
+
+  <hr>
+
+  <form action="{{ url_for('predict') }}" method="post">
+
+    <fieldset>
+      <legend><b>Housing Features</b></legend>
+
+      <label>Median Income:</label><br>
+      <input type="number" name="MedInc" step="any" size="30" required><br><br>
+
+      <label>House Age:</label><br>
+      <input type="number" name="HouseAge" step="any" size="30" required><br><br>
+
+      <label>Average Rooms:</label><br>
+      <input type="number" name="AveRooms" step="any" size="30" required><br><br>
+
+      <label>Average Bedrooms:</label><br>
+      <input type="number" name="AveBedrms" step="any" size="30" required><br><br>
+
+      <label>Population:</label><br>
+      <input type="number" name="Population" step="any" size="30" required><br><br>
+
+      <label>Average Occupancy:</label><br>
+      <input type="number" name="AveOccup" step="any" size="30" required><br><br>
+
+      <label>Latitude:</label><br>
+      <input type="number" name="Latitude" step="any" size="30" required><br><br>
+
+      <label>Longitude:</label><br>
+      <input type="number" name="Longitude" step="any" size="30" required><br><br>
+
+      <center>
+        <input type="submit" value="Predict Price">
+      </center>
+
+    </fieldset>
+
+  </form>
+
+  <br><br>
+
+  <center>
+    <h3>{{ prediction_text }}</h3>
+  </center>
+
+</body>
+</html>
